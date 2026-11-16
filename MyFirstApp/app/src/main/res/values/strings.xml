@@ -1,0 +1,55 @@
+<resources>
+    <!-- Application display name shown under the launcher icon. -->
+    <string name="app_name">MyFirstApp</string>
+
+    <!-- ===================== Number-guessing game ===================== -->
+    <string name="prompt_guess">Guess a number (0 - 100):</string>
+    <string name="hint_guess">Enter a number</string>
+    <string name="btn_confirm">Confirm</string>
+    <string name="error_invalid">Your data is incorrect. Enter again!</string>
+    <string name="win">You win!</string>
+    <string name="wrong">You are wrong! Guess again</string>
+    <string name="play_again">Play Again</string>
+
+    <!-- ===================== Bingo game ===================== -->
+    <string name="bingo_title">Bingo Game</string>
+    <string name="bingo_prompt">Press Draw Number to call a number. Get a full line to win BINGO!</string>
+    <string name="btn_draw">Draw Number</string>
+    <string name="btn_new_bingo_round">New Round</string>
+    <string name="btn_back_game">Back to Game</string>
+    <string name="bingo_win">🎉 BINGO! You win!</string>
+    <string name="bingo_lose">No Bingo yet. Keep going!</string>
+    <string name="last_drawn">Last drawn: %1$s</string>
+    <string name="guess_game_btn">Guess Game</string>
+
+    <!-- ===================== History screen ===================== -->
+    <string name="history_title">Game History</string>
+    <string name="history_empty">No game records yet.</string>
+    <string name="history_refresh">Refresh</string>
+
+    <!-- ===================== Selection screen ===================== -->
+    <string name="click_prompt">Please click:</string>
+    <string name="customer_1">Customer 1</string>
+    <string name="customer_2">Customer 2</string>
+    <string name="select_prompt">Please select one item:</string>
+    <string name="breakfast">Breakfast</string>
+    <string name="lunch">Lunch</string>
+    <string name="dinner">Dinner</string>
+    <string name="confirm">Confirm</string>
+    <string name="initial_result">Please select item:</string>
+    <string name="return_game">Return</string>
+
+    <!-- ===================== Login / Settings ===================== -->
+    <string name="login_title">Login</string>
+    <string name="username_hint">Username</string>
+    <string name="password_hint">Password</string>
+    <string name="login_btn">Login</string>
+    <string name="settings_btn">Settings</string>
+    <string name="logout_btn">Logout</string>
+    <string name="save_btn">Save and Return</string>
+    <string name="config_title">Game Settings</string>
+    <string name="range_100">Range: 0 - 100</string>
+    <string name="range_500">Range: 0 - 500</string>
+    <string name="bingo_btn">Bingo</string>
+    <string name="history_btn">History</string>
+</resources>

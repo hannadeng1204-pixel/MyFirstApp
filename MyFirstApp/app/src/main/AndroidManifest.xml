@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    AndroidManifest.xml — the app's entry-point configuration file.
+
+    This file declares:
+      * The application attributes (icon, label, theme, backup rules).
+      * Every Activity in the app, including which one is launched first
+        (the LAUNCHER activity) and which ones can be started by other apps.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyFirstApp"
+        tools:targetApi="31">
+
+        <!-- 1. Login screen — set as the LAUNCHER (first screen of the app). -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 2. Main game screen (number-guessing game). -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"
+            android:label="@string/app_name" />
+
+        <!-- 3. Bingo game screen. -->
+        <activity
+            android:name=".BingoActivity"
+            android:exported="false"
+            android:label="@string/bingo_title" />
+
+        <!-- 4. Game history screen (shows records stored in SQLite). -->
+        <activity
+            android:name=".HistoryActivity"
+            android:exported="false"
+            android:label="@string/history_title" />
+
+        <!-- 5. Settings screen (configure the number-guessing range). -->
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="false"
+            android:label="@string/app_name" />
+
+        <!-- 6. Selection screen (demo of checkboxes / radio buttons). -->
+        <activity
+            android:name=".SelectionActivity"
+            android:exported="false"
+            android:label="@string/app_name" />
+
+    </application>
+
+</manifest>

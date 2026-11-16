@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    themes.xml — the app's visual theme.
+
+    The app uses the Material 3 day/night theme with no action bar (each screen
+    provides its own layout instead).
+-->
+<resources>
+
+    <style name="Theme.MyFirstApp" parent="Theme.Material3.DayNight.NoActionBar"/>
+
+</resources>

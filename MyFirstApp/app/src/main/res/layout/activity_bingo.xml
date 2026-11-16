@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    activity_bingo.xml — layout for the Bingo game screen.
+
+    Layout structure (top to bottom):
+      1. A status TextView explaining what the player should do.
+      2. A "last drawn" TextView showing the most recent number.
+      3. A 5x5 GridLayout (filled programmatically with 25 number buttons).
+      4. A row of action buttons: Draw Number, New Round.
+      5. A row of navigation buttons: Guess Game, History.
+-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- 1. Game status message -->
+        <TextView
+            android:id="@+id/tvBingoStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/bingo_prompt"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <!-- 2. Last called number -->
+        <TextView
+            android:id="@+id/tvLastDrawn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="@string/last_drawn"
+            android:textSize="18sp" />
+
+        <!-- 3. The 5x5 Bingo card grid (buttons are added in code) -->
+        <GridLayout
+            android:id="@+id/gridBingo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:columnCount="5" />
+
+        <!-- 4. Game action buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!-- Call a single random number -->
+            <Button
+                android:id="@+id/btnDraw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_draw" />
+
+            <!-- Start a brand-new round -->
+            <Button
+                android:id="@+id/btnNewRound"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:text="@string/btn_new_bingo_round" />
+        </LinearLayout>
+
+        <!-- 5. Navigation buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!-- Go to the number-guessing game -->
+            <Button
+                android:id="@+id/btnGuessGame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/guess_game_btn" />
+
+            <!-- Go to the SQLite history screen -->
+            <Button
+                android:id="@+id/btnHistory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:text="@string/history_btn" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
